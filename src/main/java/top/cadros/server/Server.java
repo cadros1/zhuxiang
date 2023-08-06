@@ -7,10 +7,10 @@ import top.cadros.object.*;
 public class Server {
     public static void main(String[] args)throws Exception{
         ServerSocket ss=new ServerSocket(6666);
-        System.out.println("服务器已启动，端口号：6666\n等待客户端连接...\n");
+        System.out.println("服务器已启动，端口号：6666\n等待客户端连接...");
         for(;;){
             Socket sock=ss.accept();
-            System.out.println("客户端"+sock.getInetAddress()+"已连接\n");
+            System.out.println("客户端"+sock.getInetAddress()+"已连接");
             new Handler(sock).start();
         }
     }
@@ -38,13 +38,13 @@ class Handler extends Thread{
             }catch(Exception ex){
                 ex.printStackTrace();
             }
-            System.out.println("客户端"+sock.getInetAddress()+"已断开\n");
+            System.out.println("客户端"+sock.getInetAddress()+"已断开");
         }
     }
     
     public Response handle(Request request)throws Exception{
         switch(request.getType()){
-            case 0:
+            case Request.LOGIN:
                 return new Response(true,null);
         }
         return null;

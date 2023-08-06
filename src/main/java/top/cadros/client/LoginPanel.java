@@ -49,7 +49,7 @@ public class LoginPanel extends JPanel{
                 JOptionPane.showMessageDialog(null,"密码长度不正确","错误",JOptionPane.ERROR_MESSAGE);
             else{
                 try{
-                    Response response=Client.sendRequest(new Request(0,new User(studentIDField.getText(),String.valueOf(passwordField.getPassword()))));
+                    Response response=Client.sendRequest(new Request(Request.LOGIN,new User(studentIDField.getText(),String.valueOf(passwordField.getPassword()))));
                     if(response.hasSucceed()){
                         JOptionPane.showMessageDialog(null,"登录成功","成功",JOptionPane.INFORMATION_MESSAGE);
                     }else{
