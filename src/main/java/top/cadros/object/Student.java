@@ -1,5 +1,13 @@
 package top.cadros.object;
 
+/**
+ * 此类封装了学生信息
+ * 
+ * @param id 在数据库中的ID
+ * @param name 学生姓名
+ * @param studentID 学号
+ * @param academy 学院
+ */
 public class Student implements java.io.Serializable{
     private int id;
     private String name;

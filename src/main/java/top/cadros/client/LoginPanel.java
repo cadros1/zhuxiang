@@ -4,6 +4,11 @@ import javax.swing.*;
 import top.cadros.object.*;
 import java.awt.*;
 
+/**
+ * 此类继承自JPanel，为登录面板
+ * 
+ * @author Cadros
+ */
 public class LoginPanel extends JPanel{
     public LoginPanel(){
         this.setLayout(null);

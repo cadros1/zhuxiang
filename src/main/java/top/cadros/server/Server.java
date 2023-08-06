@@ -4,6 +4,11 @@ import java.io.*;
 import java.net.*;
 import top.cadros.object.*;
 
+/**
+ * 此类为服务端主类，负责监听客户端的连接并创建新的线程处理客户端的请求
+ * 
+ * @author Cadros
+ */
 public class Server {
     public static void main(String[] args)throws Exception{
         ServerSocket ss=new ServerSocket(6666);
